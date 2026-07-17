@@ -33,10 +33,10 @@
 ## 安装
 
 ```bash
-npx skills add Eddie0521/web-search -a claude-code codex cursor -g -y
+npx skills add Eddie0521/web-search
 ```
 
-技能安装到共享目录 `~/.agents/skills/web-search`，Claude Code、Codex、Cursor 等 agent 自动识别，其他 skill 也可通过路径调用。更新用 `npx skills update -g -y`。
+技能安装到共享目录 `~/.agents/skills/web-search`，Claude Code、Codex、Cursor 等 agent 自动识别，其他 skill 也可通过路径调用。
 
 ### 前置依赖：bun
 

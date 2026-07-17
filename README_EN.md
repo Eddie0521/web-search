@@ -33,10 +33,10 @@ All outbound requests pass through SSRF protection (protocol allow-list, localho
 ## Install
 
 ```bash
-npx skills add Eddie0521/web-search -a claude-code codex cursor -g -y
+npx skills add Eddie0521/web-search
 ```
 
-The skill installs to the shared `~/.agents/skills/web-search` directory, auto-detected by Claude Code, Codex, Cursor, and other agents. Other skills can invoke it by path. Update with `npx skills update -g -y`.
+The skill installs to the shared `~/.agents/skills/web-search` directory, auto-detected by Claude Code, Codex, Cursor, and other agents. Other skills can invoke it by path.
 
 ### Prerequisite: bun
 
