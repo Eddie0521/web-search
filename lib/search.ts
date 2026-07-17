@@ -1,6 +1,5 @@
 import type { SearchOptions, SearchResponse } from "./types.ts";
 import { resolveKeys } from "./config.ts";
-import { isPaperQuery, searchArxiv } from "./arxiv.ts";
 
 const EXA_SEARCH_URL = "https://api.exa.ai/search";
 const EXA_MCP_URL = "https://mcp.exa.ai/mcp";
@@ -125,11 +124,6 @@ async function searchTavily(query: string, key: string, options: SearchOptions):
 }
 
 export async function search(query: string, options: SearchOptions = {}): Promise<SearchResponse> {
-  if (isPaperQuery(query)) {
-    const arxiv = await searchArxiv(query, options);
-    if (arxiv) return arxiv;
-  }
-
   const keys = resolveKeys();
   const exaResult = await searchExa(query, keys.exa, options);
   if (exaResult) return exaResult;
@@ -147,7 +141,7 @@ export async function search(query: string, options: SearchOptions = {}): Promis
 
 export function getAvailableProviders(): string[] {
   const keys = resolveKeys();
-  const available = ["arxiv", "exa", "anysearch"];
+  const available = ["exa", "anysearch"];
   if (keys.tavily) available.push("tavily");
   return available;
 }

@@ -5,15 +5,8 @@ mock.module("../lib/config.ts", () => ({
 }));
 
 const { search } = await import("../lib/search.ts");
-const { isPaperQuery } = await import("../lib/arxiv.ts");
 
 const originalFetch = globalThis.fetch;
-
-test("isPaperQuery detects paper intent", () => {
-  expect(isPaperQuery("arxiv multi-agent world model")).toBe(true);
-  expect(isPaperQuery("2604.18564")).toBe(true);
-  expect(isPaperQuery("weather in Tokyo")).toBe(false);
-});
 
 test("search returns results from Exa MCP (zero config)", async () => {
   globalThis.fetch = mock(async (url: string) => {

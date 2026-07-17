@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+  <!-- background -->
+  <rect width="1000" height="500" rx="16" fill="#ffffff" stroke="#d0d7de" stroke-width="1"/>
+
+  <!-- title -->
+  <text x="500" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2328">Web Search — 搜索 &amp; 抓取架构</text>
+
+  <!-- ========== SEARCH LANE ========== -->
+  <text x="80" y="90" font-size="14" font-weight="600" fill="#0969da">搜索 Search</text>
+
+  <!-- Query -->
+  <rect x="40" y="108" width="110" height="46" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="95" y="137" text-anchor="middle" font-size="14" fill="#1f2328">Query</text>
+
+  <!-- Exa -->
+  <rect x="190" y="108" width="130" height="46" rx="10" fill="#f6f8fa" stroke="#2da44e" stroke-width="2"/>
+  <text x="255" y="128" text-anchor="middle" font-size="14" font-weight="600" fill="#1a7f37">Exa</text>
+  <text x="255" y="145" text-anchor="middle" font-size="10" fill="#656d76">零配置 MCP</text>
+
+  <!-- AnySearch -->
+  <rect x="360" y="108" width="130" height="46" rx="10" fill="#f6f8fa" stroke="#bf8700" stroke-width="2"/>
+  <text x="425" y="128" text-anchor="middle" font-size="14" font-weight="600" fill="#9a6700">AnySearch</text>
+  <text x="425" y="145" text-anchor="middle" font-size="10" fill="#656d76">匿名 / Key</text>
+
+  <!-- Tavily -->
+  <rect x="530" y="108" width="130" height="46" rx="10" fill="#f6f8fa" stroke="#cf222e" stroke-width="2"/>
+  <text x="595" y="128" text-anchor="middle" font-size="14" font-weight="600" fill="#cf222e">Tavily</text>
+  <text x="595" y="145" text-anchor="middle" font-size="10" fill="#656d76">需 Key</text>
+
+  <!-- 结构化结果 -->
+  <rect x="700" y="108" width="140" height="46" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="770" y="137" text-anchor="middle" font-size="14" fill="#1f2328">结构化结果</text>
+
+  <!-- Search arrows (all at y=131, box vertical centers) -->
+  <path d="M150 131 L190 131" stroke="#8c959f" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M320 131 L360 131" stroke="#8c959f" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M490 131 L530 131" stroke="#8c959f" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M660 131 L700 131" stroke="#8c959f" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Fallback label -->
+  <text x="410" y="178" text-anchor="middle" font-size="10" fill="#656d76" font-style="italic">← 前一个失败自动降级到下一个 →</text>
+
+  <!-- Search result → Agent (final segment horizontal into agent) -->
+  <path d="M840 131 L860 131 L860 236 L875 236" fill="none" stroke="#8c959f" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+
+  <!-- ========== FETCH LANE ========== -->
+  <text x="80" y="228" font-size="14" font-weight="600" fill="#cf222e">抓取 Fetch</text>
+
+  <!-- Input -->
+  <rect x="40" y="246" width="110" height="86" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="95" y="273" text-anchor="middle" font-size="13" fill="#1f2328">arXiv URL</text>
+  <text x="95" y="293" text-anchor="middle" font-size="13" fill="#1f2328">GitHub URL</text>
+  <text x="95" y="313" text-anchor="middle" font-size="13" fill="#1f2328">PDF / 网页</text>
+
+  <!-- Router (height=96, center y=289) -->
+  <rect x="190" y="241" width="110" height="96" rx="10" fill="#f6f8fa" stroke="#8250df" stroke-width="2"/>
+  <text x="245" y="275" text-anchor="middle" font-size="15" font-weight="600" fill="#8250df">路由</text>
+  <text x="245" y="295" text-anchor="middle" font-size="10" fill="#656d76">按内容类型</text>
+  <text x="245" y="308" text-anchor="middle" font-size="10" fill="#656d76">分流</text>
+
+  <!-- Handler boxes, centers at 247 / 289 / 331 -->
+  <rect x="335" y="228" width="150" height="38" rx="8" fill="#f6f8fa" stroke="#2da44e" stroke-width="2"/>
+  <text x="410" y="251" text-anchor="middle" font-size="12" fill="#1a7f37">官方 HTML → ar5iv → PDF</text>
+
+  <rect x="335" y="270" width="150" height="38" rx="8" fill="#f6f8fa" stroke="#bf8700" stroke-width="2"/>
+  <text x="410" y="293" text-anchor="middle" font-size="12" fill="#9a6700">GitHub API</text>
+
+  <rect x="335" y="312" width="150" height="38" rx="8" fill="#f6f8fa" stroke="#cf222e" stroke-width="2"/>
+  <text x="410" y="335" text-anchor="middle" font-size="12" fill="#cf222e">Readability → 代理</text>
+
+  <!-- Fetch arrows: every arrow sits exactly on box vertical centers -->
+  <path d="M150 289 L190 289" stroke="#8c959f" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M300 247 L335 247" stroke="#8c959f" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M300 289 L335 289" stroke="#8c959f" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M300 331 L335 331" stroke="#8c959f" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M485 289 L525 289" stroke="#8c959f" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Markdown 全文 -->
+  <rect x="525" y="266" width="150" height="46" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="600" y="295" text-anchor="middle" font-size="14" fill="#1f2328">Markdown 全文</text>
+
+  <!-- Markdown → Agent (final segment horizontal into agent) -->
+  <path d="M675 289 L700 289 L700 236 L875 236" fill="none" stroke="#8c959f" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+
+  <!-- ========== SSRF BOUNDARY ========== -->
+  <rect x="40" y="400" width="780" height="54" rx="12" fill="none" stroke="#cf222e" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="430" y="424" text-anchor="middle" font-size="13" font-weight="600" fill="#cf222e">SSRF 防护</text>
+  <text x="430" y="444" text-anchor="middle" font-size="10" fill="#656d76">协议白名单 · localhost 拦截 · DNS 解析内网地址拒绝</text>
+
+  <!-- Agent -->
+  <rect x="875" y="208" width="100" height="56" rx="12" fill="#f6f8fa" stroke="#0969da" stroke-width="2"/>
+  <text x="925" y="233" text-anchor="middle" font-size="15" font-weight="600" fill="#0969da">Agent</text>
+  <text x="925" y="250" text-anchor="middle" font-size="10" fill="#656d76">或下游 Skill</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/>
+    </marker>
+  </defs>
+</svg>

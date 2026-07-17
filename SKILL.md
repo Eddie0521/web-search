@@ -1,6 +1,6 @@
 ---
 name: web-search
-description: 搜索互联网与抓取 URL 内容。搜索级联 Exa→AnySearch→Tavily，论文查询走 arXiv API；抓取支持网页/PDF/GitHub/arXiv 全文级联。供其他 skill 或 agent 通过 CLI 调用。
+description: 搜索互联网与抓取 URL 内容。搜索级联 Exa→AnySearch→Tavily；抓取支持网页/PDF/GitHub/arXiv 论文全文级联。供其他 skill 或 agent 通过 CLI 调用。
 ---
 
 # Web-Search
@@ -18,9 +18,7 @@ bun <本skill目录>/fetch.ts <URL|本地PDF> [输出.md]
 
 ## 搜索
 
-**论文查询**（含 arxiv、paper、论文、预印本或 arXiv ID）→ **arXiv API**（免 key，结构化题目/作者/摘要/日期）
-
-否则级联：**Exa**（零配置 MCP 或 API key）→ **AnySearch**（匿名或 key）→ **Tavily**（需 key）
+级联：**Exa**（零配置 MCP 或 API key）→ **AnySearch**（匿名或 key）→ **Tavily**（需 key）
 
 ## 抓取
 
