@@ -155,6 +155,5 @@ npx skills remove Eddie0521/web-search -g
 ## 支持
 
 - 觉得有用就给个 ⭐ Star
-- [分享到 Twitter](https://twitter.com/intent/tweet?url=https://github.com/Eddie0521/web-search&text=Web%20Search%20-%20AI%20agent%20web%20search%20%26%20fetch%20skill)
 - 发现引擎失效或内容类型不支持，欢迎开 [Issue](https://github.com/Eddie0521/web-search/issues)
 - 欢迎提 PR 修复或改进

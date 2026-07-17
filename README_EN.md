@@ -155,6 +155,5 @@ If installed manually via `sync.sh`, remove `~/.claude/skills/web-search` and `~
 ## Support
 
 - Found it useful? Give it a ⭐ Star
-- [Share on Twitter](https://twitter.com/intent/tweet?url=https://github.com/Eddie0521/web-search&text=Web%20Search%20-%20AI%20agent%20web%20search%20%26%20fetch%20skill)
 - Found a broken provider or unsupported content type? Open an [Issue](https://github.com/Eddie0521/web-search/issues)
 - PRs welcome for fixes and improvements
