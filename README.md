@@ -146,6 +146,12 @@ npx skills remove Eddie0521/web-search -g
 
 如果通过 `sync.sh` 手动安装，需删除 `~/.claude/skills/web-search` 和 `~/.agents/skills/web-search`。
 
+## 致谢
+
+- [waza](https://github.com/tw93/waza) — README 结构和视觉风格参考
+- [pi-web-access](https://pi.dev/packages/pi-web-access) — 搜索 provider 设计和多引擎降级思路的参考
+- [pi-web-suite](https://github.com/Eddie0521/pi-web-suite) — 本项目的早期扩展基础
+
 ## 支持
 
 - 觉得有用就给个 ⭐ Star
